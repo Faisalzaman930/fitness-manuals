@@ -23,7 +23,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const machineUrls: MetadataRoute.Sitemap = (machines ?? []).map((m) => ({
     url: `${BASE}/machines/${m.slug}`,
-    lastModified: m.updated_at ? new Date(m.updated_at) : new Date(),
     changeFrequency: "monthly",
     priority: 0.8,
   }));

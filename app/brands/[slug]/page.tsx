@@ -58,7 +58,7 @@ export default async function BrandPage({ params }: Props) {
     ]),
     organizationSchema({
       name: brand.name,
-      url: brand.website ?? `https://fitness-manuals.vercel.app/brands/${slug}`,
+      url: brand.website_url ?? `https://fitness-manuals.vercel.app/brands/${slug}`,
       description: brand.description ?? `${brand.name} fitness equipment manufacturer`,
       country: brand.country ?? "USA",
     }),
